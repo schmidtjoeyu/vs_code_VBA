@@ -1,7 +1,7 @@
 
 ' originalPrice(i, 1) 是 Variant 元素，但 CalculatePrice 要求 Double。由于参数默认为 ByRef，两边类型必须匹配，所以编译报错。推荐解决方法：参数改为 ByVal
-
-Function DiscountedPrice(ByVal price As Double, discountRate As Double) As Double
+' 如果不写返回类型，VBA 默认会把返回值当作 Variant，函数仍可能运行，但题目说“there is no need to define a return type for the function to work correctly in Excel”这种说法通常应判断为 False，因为规范定义 UDF 时应指定合适的返回类型。
+Function DiscountedPrice(ByVal price As Double, discountRate As Double) As Double  
     If discountRate > 0 And discountRate <= 1 Then
         DiscountedPrice = price * (1 - discountRate)
     Else
