@@ -25,4 +25,3 @@ Sub ApplyDiscount()
         ws.Cells(i, 2).Value = DiscountedPrice(originalPrice(i, 1), discountRate) ' Write discounted price in column B
     Next i
 End Sub
-
