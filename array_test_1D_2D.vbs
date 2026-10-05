@@ -24,7 +24,7 @@ Sub Populate2DArray()
         Next j
     Next i
 
-    MsgBox "2D Array populated. Value at (2,3): " & grid(1, 2) ' Display value at row 2, column 3
+    MsgBox ("2D Array populated. Value at (2,3): " & grid(1, 2)) ' Display value at row 2, column 3
 End Sub
 
 ' Read data from a worksheet into an array, manipulate it, and write it back.

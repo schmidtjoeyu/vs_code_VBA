@@ -43,7 +43,7 @@ Sub ProcessOrder()
     If itemCount > 0 Then
         ' MsgBox(Prompt, Buttons, Title) 显示消息对话框并返回用户单击的按钮：
         '   Prompt  ：消息正文；
-        '   Buttons ：按钮、图标等样式常量，可以用“+”组合；
+        '   Buttons ：按钮、图标等样式常量，可以用“+”组合；中间的 buttons 如果要留空，需要写成 MsgBox "内容", , "Test"
         '   Title   ：标题栏文字。
         ' vbYesNo 显示“是/否”按钮，vbQuestion 显示问号图标。
         response = MsgBox("You are about to order " & itemCount & " items. Confirm?", vbYesNo + vbQuestion, "Order Confirmation")
