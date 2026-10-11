@@ -39,3 +39,17 @@ End Sub
 Private Sub CommandButton1_Click()
     MsgBox "Button Clicked. You entered the value: " & TextBox1.value
 End Sub
+
+Private Sub CommandButton1_Click()
+    Dim Value As VbMsgBoxResult
+    value = MsgBox("Are you sure you want to proceed?", vbYesNo + vbQuestion, "Confirmation")
+        ' 将 MsgBox 的返回值与 vbYes 比较，判断用户是否确认。
+    If value = vbYes Then
+        ' 省略返回值接收时，可以不写括号。
+        ' vbInformation 显示信息图标。
+        MsgBox "Confirmed"
+    Else
+        ' vbExclamation 显示警告图标。
+        MsgBox "Order canceled."
+    End If
+End Sub
